@@ -6,13 +6,13 @@
       "value": "southcentralus"
     },
     "openai_name": {
-      "value": "achandopenaix1"
+      "value": "myopenai"
     },
     "search_name": {
-      "value": "achandaisearchx1"
+      "value": "mysearch"
     },
     "storage_name": {
-      "value": "achandaistorex1"
+      "value": "mystore"
     }
   }
 }
