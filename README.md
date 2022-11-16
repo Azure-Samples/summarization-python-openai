@@ -1,57 +1,63 @@
-# Project Name
+This repository contains an E2E solution architecture on how to use OpenAI to solve common real world enterprise scenarios such as storing,  searching, and summarizing data. 
 
-(short, 1-3 sentenced, description of the project)
+This sample contains a solution notebook that shows you how easy it is to use Azure OpenAI along with Azure Cognitive Search, Azure Storage and Visual Studio Code to make sense of large amounts of data.
 
-## Features
+Following are detailed step by step instructions to setup an environment to try out this solution notebook for yourself: 
 
-This project framework provides the following features:
+I Clone Git Repo using VSCode:
 
-* Feature 1
-* Feature 2
-* ...
+  1. Install - [Git - Downloading Package (git-scm.com)](https://git-scm.com/download/win)
+  2. Install - [GitHub Pull Requests and Issues - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+  3. Open VSCode - close all folders and pick Clone Git Repository
+  4. Clone [https://github.com/Azure-Samples/summarization-python-openai.git](https://github.com/Azure-Samples/summarization-python-openai.git)
 
-## Getting Started
+II Create Virtual Environment using VSCode:
 
-### Prerequisites
+  1. Ctrl-Shift-P, then type Python: Create Environment
+  2. Pick venv and the Python interpreter
+  3. [Using Python Environments in Visual Studio Code](https://code.visualstudio.com/docs/python/environments#_using-the-create-environment-command)
+  4. Open the qbs\_end\_to\_end.ipynb notebook file and change the environment to the .venv from the default base python environment (top right hand corner). This will install ipykernel package to work with your venv.
 
-(ideally very short, if any)
+III Create Azure Environment using Bicep:
 
-- OS
-- Library version
-- ...
+  1. [On Windows] Install Node.js 6 or later ([https://nodejs.org](https://nodejs.org/)).
+  2. Install [Azure Account - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account).
+  3. Install - [Bicep - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
+  4. [Optional] Edit rg.parameters.json if you don't want to use default names for the resources
+  5. Right click on rg.bicep and pick Deploy Bicep File … Enter relevant names and other fields
+  6. Monitor the output window and click on link to portal to monitor deployment
 
-### Installation
+IV Store secrets in a .env file:
 
-(ideally very short)
+  1. Create a .env file in the src folder
+  2. Add 4 values into it getting them from the Keys section of the portal for the respective resources (use the Query key for search and not the admin key):
+    
+    OPENAI_API_KEY=
+    OPENAI_ENDPOINT=https://<youropenainame>.openai.azure.com/
+    SEARCH_API_KEY=
+    SEARCH_ENDPOINT=https://<yoursearchname>.search.windows.net/
 
-- npm install [package name]
-- mvn install
-- ...
+V Upload dataset to Azure Storage using VSCode:
 
-### Quickstart
-(Add steps to get up and running quickly)
+  1. Ensure the storage account is created with a blob service called _default_ and a blob container called _openaiblob_
+  2. Install [Azure Storage - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage)
+  3. Right click on cnn\_dataset.json (in the data sub-folder) and select Upload to Azure Storage, filling in the required fields.
 
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
+VIa Import dataset data into Search using the Azure Portal
 
+  1. Go to the search service you created in the portal
+  2. Pick Import data and fill in the settings as below
 
-## Demo
+    Data Source: Azure Blob Storage
+    Data to extract: Content and metadata
+    Parsing mode: JSON array
+    Connection string - Choose existing - Storage Account (created above) - Container (created above)
 
-A demo app is included to show how to use the project.
+VIb (Skip to) Customize target index -
 
-To run the demo, follow these steps:
+  1. Check the fields id/article/highlights making the latter 2 searchable.
+  2. Make id, article, highlights retrievable
+  3. Create indexer
+  4. Submit
 
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+VII **Final Step: Go to VSCode and run each of the steps in the Python notebook**
