@@ -100,7 +100,6 @@ module storage 'core/storage/storage-account.bicep' = {
   }
 }
 
-
 module searchRole 'core/security/role.bicep' = {
   scope: rg
   name: 'search-role'
@@ -151,8 +150,6 @@ module openAiRole 'core/security/role.bicep' = {
     principalType: 'User'
   }
 }
-
-
 
 // App outputs
 output AZURE_LOCATION string = location
