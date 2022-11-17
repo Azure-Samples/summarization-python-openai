@@ -29,5 +29,4 @@ resource deployment 'Microsoft.CognitiveServices/accounts/deployments@2022-10-01
 }]
 
 output id string = account.id
-output key string = account.listKeys().key1
 output endpoint string = account.properties.endpoint
