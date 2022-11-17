@@ -32,5 +32,4 @@ resource search 'Microsoft.Search/searchServices@2021-04-01-preview' = {
 }
 
 output id string = search.id
-output key string = search.listQueryKeys().value[0].key
 output endpoint string = 'https://${name}.search.windows.net/'
