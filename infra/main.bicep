@@ -153,7 +153,7 @@ module openAiRole 'core/security/role.bicep' = {
 
 // App outputs
 output AZURE_LOCATION string = location
-output AZURE_TENANT_ID string = tenant().tenantId
+//output AZURE_TENANT_ID string = tenant().tenantId
 output AZURE_STORAGE_ACCOUNT_NAME string = storage.outputs.name
 output OPENAI_ENDPOINT string = openAiAccount.outputs.endpoint
 output SEARCH_ENDPOINT string = searchServices.outputs.endpoint

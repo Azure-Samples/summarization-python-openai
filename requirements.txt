@@ -1,4 +1,5 @@
 azure-core==1.26.1
+azure-identity==1.12.0
 azure-search-documents==11.3.0
 matplotlib==3.6.2
 openai==0.25.0
