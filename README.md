@@ -1,16 +1,17 @@
 This repository contains a Python Notebook that shows you how easy it is to deploy and use Azure OpenAI along with Azure Cognitive Search, Azure Storage and Visual Studio Code to make sense of large amounts of data.
+<pre>
+
+</pre>
 ![Figure 1: End-to-end Architecture](images/EndtoEndArchitecture.png)
-<figcaption align = "center">Figure 1: End-to-end Architecture</figcaption>
+<figcaption align = "center">Figure 1: End-to-end Architecture</figcaption><br/>
 
 Following are detailed step by step instructions to setup an environment to try out this solution notebook for yourself: 
 
-**Prerequisites**
+**Clone this repository**
   1. Install [git](https://git-scm.com/download/win)
   2. Install the [Visual Studio Code extension for GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
-
-**Clone this repository**
-  1. Open VSCode - close all folders and pick *Clone Git Repository*. 
-  2. Clone [https://github.com/Azure-Samples/summarization-python-openai.git](https://github.com/Azure-Samples/summarization-python-openai.git). [NOTE: Cloning might take a while since this pulls down a large dataset file.]
+  3. Open VSCode - close all folders and pick *Clone Git Repository*. 
+  4. Clone [https://github.com/Azure-Samples/summarization-python-openai.git](https://github.com/Azure-Samples/summarization-python-openai.git). [NOTE: Cloning might take a while since this pulls down a large dataset file.]
 
 **Create a Python virtual environment**
   1. Ctrl-Shift-P, then type *Python: Create Environment* (see here for more guidance [Using Python Environments in Visual Studio Code](https://code.visualstudio.com/docs/python/environments#_using-the-create-environment-command))
@@ -35,7 +36,7 @@ Data to extract: Content and metadata
 Parsing mode: JSON array
 Connection string - Choose an existing connection - Storage Account (copied above) - Container (openaiblob)
 ~~~
-4. (Next then -) Skip to Customize target index. Check the fields id/article/highlights making all 3 retrievable and the latter 2 searchable.
+4. (Click Next then ...) Skip to Customize target index. Check the fields id/article/highlights making all 3 retrievable and the latter 2 searchable.
 5. Create indexer and Submit. 
 
 **Final Step: Go to VSCode and run each of the steps in the Python notebook**
