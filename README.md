@@ -19,7 +19,7 @@ Following are detailed step by step instructions to setup an environment to try 
   3. Open the *qbs\_end\_to\_end.ipynb* notebook file in the src folder. Change the environment to the above .venv (top right hand corner, might say base). 
 
 **Run azd up to deploy this solution to Azure**
-   1. Install - *[Azure Developer CLI](]https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=baremetal%2Cwindows)*
+   1. Install [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=baremetal%2Cwindows)
    2. In the VSCode Terminal run
 ~~~ 
 az bicep upgrade
