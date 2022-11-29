@@ -26,7 +26,7 @@ az bicep upgrade
 azd up
 ~~~
 **Configure Cognitive Search in Portal**
-  1. Go to rg-<environment> in https://portal.azure.com. Copy Storage Account name (you will need this later)
+  1. Go to rg-\<environment\> in https://portal.azure.com. Copy Storage Account name (you will need this later)
   2. Go to the Search Service under the rg-<environment> resource group. Select Keys and check Role-based access control
   3. Return to Search Service page. Click Import data and fill in the settings as below
 ~~~
