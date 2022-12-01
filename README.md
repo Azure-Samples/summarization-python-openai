@@ -10,6 +10,7 @@ This repository contains a Python Notebook that shows you how easy it is to depl
 
 </pre>
 Following are detailed step by step instructions to setup an environment to try out this solution notebook for yourself: 
+
 **I Clone this repository**
   1. Install [git](https://git-scm.com/download/win)
   2. Install the [Visual Studio Code extension for GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
