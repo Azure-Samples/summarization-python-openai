@@ -1,3 +1,5 @@
+*[**IMPORTANT NOTE** Azure OpenAI is currently in limited public preview. Please request access here https://aka.ms/oaiapply. You will need this access in order to create OpenAI resources and try out the last OpenAI portion of the notebook.]*
+
 This repository contains a Python Notebook that shows you how easy it is to deploy and use Azure OpenAI along with Azure Cognitive Search, Azure Storage and Visual Studio Code to make sense of large amounts of data.
 <pre>
 
@@ -25,6 +27,10 @@ Following are detailed step by step instructions to setup an environment to try 
 az bicep upgrade
 azd up
 ~~~
+*[**NOTE**: OpenAI creation will fail if your Azure subscription is not yet whitelisted after applying for access as mentioned above or if this subscriptions already  has created an OpenAI instance. One instance of the service is allowed per subscription during preview.]*
+<pre>
+
+</pre>
 **Configure Cognitive Search in Portal**
   1. Go to rg-\<environment\> in https://portal.azure.com. Copy Storage Account name (you will need this later)
   2. Go to the Search Service under the rg-<environment> resource group. Select Keys and check Role-based access control
