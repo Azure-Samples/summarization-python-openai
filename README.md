@@ -10,19 +10,13 @@ This repository contains a Python Notebook that shows you how easy it is to depl
 
 </pre>
 Following are detailed step by step instructions to setup an environment to try out this solution notebook for yourself: 
-
-**I Using CodeSpaces**
-  1. Goto the root of this repository: https://github.com/Azure-Samples/summarization-python-openai
-  2. Click on the green Code dropdown and create a new Codespace. 
-  3. Jump directly to step IV below.
-  
-**II Clone this repository**
+**I Clone this repository**
   1. Install [git](https://git-scm.com/download/win)
   2. Install the [Visual Studio Code extension for GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
   3. Open VSCode - close all folders and pick *Clone Git Repository*. 
   4. Clone [https://github.com/Azure-Samples/summarization-python-openai.git](https://github.com/Azure-Samples/summarization-python-openai.git). [NOTE: Cloning might take a while since this pulls down a large dataset file.]
 
-**III Create a Python virtual environment**
+**II Create a Python virtual environment**
   1. Ctrl-Shift-P, then type *Python: Create Environment* (see here for more guidance [Using Python Environments in Visual Studio Code](https://code.visualstudio.com/docs/python/environments#_using-the-create-environment-command))
   2. Pick *venv* and the *Python interpreter*. Wait for the environment to get created, this will also take a while (see the bottom right for status)
   3. Open the *qbs\_end\_to\_end.ipynb* notebook file in the src folder. Change the environment to the above .venv (top right hand corner, might say base). 
@@ -30,7 +24,7 @@ Following are detailed step by step instructions to setup an environment to try 
 <pre>
 
 </pre>
-**IV Run azd up to deploy this solution to Azure**
+**III Run azd up to deploy this solution to Azure**
    2. In the VSCode Terminal run
 ~~~ 
 az bicep upgrade
@@ -40,7 +34,7 @@ azd up
 <pre>
 
 </pre>
-**V Configure Cognitive Search in Portal**
+**IV Configure Cognitive Search in Portal**
   1. Go to rg-\<environment\> in https://portal.azure.com. Copy Storage Account name (you will need this later)
   2. Go to the Search Service under the rg-<environment> resource group. Select Keys and check Role-based access control
   3. Return to Search Service page. Click Import data and fill in the settings as below
@@ -54,11 +48,11 @@ Connection string - Choose an existing connection - Storage Account (copied abov
 4. (Click Next then ...) Skip to Customize target index. Check the fields id/article/highlights making all 3 retrievable and the latter 2 searchable.
 5. Create indexer and Submit. 
 
-**VI Final Step: Go to VSCode and run each of the steps in the Python notebook**
+**V Final Step: Go to VSCode and run each of the steps in the Python notebook**
 <pre>
 
 </pre>
-**VII [Optional] Cleanup**
+**VI [Optional] Cleanup**
   1. Go to rg-\<environment\> in https://portal.azure.com. 
   2. Select the OpenAI Service under the rg-<environment> resource group. Click on *Deploy* (or *Model Deployments* on the left side of the page)
   4. Click on each deployed model and select delete. Wait for one deletion to complete before deleting the next one.
