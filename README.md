@@ -27,7 +27,9 @@ Following are detailed step by step instructions to setup an environment to try 
   2. Pick *venv* and the *Python interpreter*. Wait for the environment to get created, this will also take a while (see the bottom right for status)
   3. Open the *qbs\_end\_to\_end.ipynb* notebook file in the src folder. Change the environment to the above .venv (top right hand corner, might say base). 
   4. Install [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=baremetal%2Cwindows) in the venv
+<pre>
 
+</pre>
 **IV Run azd up to deploy this solution to Azure**
    2. In the VSCode Terminal run
 ~~~ 
@@ -53,7 +55,9 @@ Connection string - Choose an existing connection - Storage Account (copied abov
 5. Create indexer and Submit. 
 
 **VI Final Step: Go to VSCode and run each of the steps in the Python notebook**
+<pre>
 
+</pre>
 **VII [Optional] Cleanup**
   1. Go to rg-\<environment\> in https://portal.azure.com. 
   2. Select the OpenAI Service under the rg-<environment> resource group. Click on *Deploy* (or *Model Deployments* on the left side of the page)
