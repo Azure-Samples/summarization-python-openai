@@ -6,7 +6,9 @@ This repository contains a Python Notebook that shows you how easy it is to depl
 </pre>
 ![Figure 1: End-to-end Architecture](images/EndtoEndArchitecture.png)
 <figcaption align = "center">Figure 1: End-to-end Architecture</figcaption><br/>
+<pre>
 
+</pre>
 Following are detailed step by step instructions to setup an environment to try out this solution notebook for yourself: 
 
 **I Using CodeSpaces**
