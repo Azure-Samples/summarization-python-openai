@@ -47,3 +47,8 @@ Connection string - Choose an existing connection - Storage Account (copied abov
 
 **Final Step: Go to VSCode and run each of the steps in the Python notebook**
 
+**Cleanup**
+  1. Go to rg-\<environment\> in https://portal.azure.com. 
+  2. Select the OpenAI Service under the rg-<environment> resource group. Click on *Deploy* (or *Model Deployments* on the left side of the page)
+  4. Click on each deployed model and select delete. Wait for one deletion to complete before deleting the next one.
+  5. Return to rg-\<environment\> page. Click Delete and fill in the name of the resource group and click delete.
