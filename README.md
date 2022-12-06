@@ -11,7 +11,7 @@ Following are detailed step by step instructions to setup an environment to try 
   2. Open VSCode. Create an empty folder and open this folder in VSCode using **Open Folder**. Install the [extension for GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
   3. In the VSCode Terminal run
 ~~~ 
-azd up
+azd up --template summarization-python-openai
 ~~~
 *[**NOTE**: OpenAI creation will fail if your Azure subscription is not yet whitelisted or if it has more than the number of OpenAI instances allowed per your quota]*
   
