@@ -6,12 +6,15 @@ This repository contains a Python Notebook that shows you how easy it is to depl
 
 Following are detailed step by step instructions to setup an environment to try out this solution notebook for yourself: 
 
-**I Setup the Azure Developer Environment using azd up**
+**I Setup the Azure Developer Environment using azd init and azd up**
   1. Install [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=baremetal%2Cwindows) 
   2. Open VSCode. Create an empty folder and open this folder in VSCode using **Open Folder**. Install the [extension for GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
   3. In the VSCode Terminal run
 ~~~ 
-azd up --template summarization-python-openai
+azd init --template summarization-python-openai
+~~~
+~~~ 
+azd up
 ~~~
 *[**NOTE**: OpenAI creation will fail if your Azure subscription is not yet whitelisted or if it has more than the number of OpenAI instances allowed per your quota]*
   
