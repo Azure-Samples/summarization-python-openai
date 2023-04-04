@@ -12,8 +12,7 @@ Following are detailed step by step instructions to setup an environment to try 
   3. In the VSCode Terminal run
 ~~~ 
 azd init --template summarization-python-openai
-~~~
-~~~ 
+
 azd up
 ~~~
 *[**NOTE**: OpenAI creation will fail if your Azure subscription is not yet whitelisted or if it has more than the number of OpenAI instances allowed per your quota]*
