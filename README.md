@@ -6,13 +6,28 @@ This repository contains a Python Notebook that shows you how easy it is to depl
 
 Following are detailed step by step instructions to setup an environment to try out this solution notebook for yourself: 
 
-**I Setup the Azure Developer Environment using azd up**
+**I Setup the Azure Developer Environment using azd init and azd up**
   1. Install [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd?tabs=baremetal%2Cwindows) 
   2. Open VSCode. Create an empty folder and open this folder in VSCode using **Open Folder**. Install the [extension for GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
   3. In the VSCode Terminal run
 ~~~ 
-azd up --template summarization-python-openai
+azd init --template summarization-python-openai
 ~~~
+This command will clone the code to your current folder and prompt you for the following information:
+
+- `Environment Name`: This will be used as a prefix for the resource group that will be created to hold all Azure resources. This name should be unique within your Azure subscription.
+
+~~~ 
+azd up
+~~~
+
+This command will prompt you for the following information:
+
+- `Azure Location`: The Azure location where your resources will be deployed.
+- `Azure Subscription`: The Azure Subscription where your resources will be deployed.
+
+> NOTE: This may take a while to complete as it executes three commands: `azd package` (packages a deployable copy of your application), `azd provision` (provisions Azure resources), and `azd deploy` (deploys application code). You will see a progress indicator as it packages, provisions and deploys your application.
+
 *[**NOTE**: OpenAI creation will fail if your Azure subscription is not yet whitelisted or if it has more than the number of OpenAI instances allowed per your quota]*
   
   4. Copy the resource group (rg*) and storage account (st*) names somewhere. You will need them later.
